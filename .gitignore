@@ -6,17 +6,17 @@ RUNNING
 *.log
 
 # pc_setupsrc creates links to the external Pencil Code installation.
-/Makefile
-/getconf.csh
-/run.csh
-/start.csh
-/start_run.csh
+/runs/*/Makefile
+/runs/*/getconf.csh
+/runs/*/run.csh
+/runs/*/start.csh
+/runs/*/start_run.csh
 
 # Generated source links, executables, and build metadata.
 # Keep the simulation's editable configuration files.
-# Add an exception here before tracking custom source files under src/.
-/src/*
-!/src/*.local
+# Add an exception here before tracking custom source files in a run's src/.
+/runs/*/src/*
+!/runs/*/src/*.local
 
 # Compiler output, including builds elsewhere in the repository.
 *.o
