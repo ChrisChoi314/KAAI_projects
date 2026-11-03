@@ -1,0 +1,55 @@
+# Pencil Code simulation output (also applies to future run subdirectories).
+data/
+COMPLETED
+STARTED
+RUNNING
+*.log
+
+# pc_setupsrc creates links to the external Pencil Code installation.
+/Makefile
+/getconf.csh
+/run.csh
+/start.csh
+/start_run.csh
+
+# Generated source links, executables, and build metadata.
+# Keep the simulation's editable configuration files.
+# Add an exception here before tracking custom source files under src/.
+/src/*
+!/src/*.local
+
+# Compiler output, including builds elsewhere in the repository.
+*.o
+*.mod
+*.smod
+*.a
+*.so
+*.dylib
+*.x
+*.dSYM/
+
+# Large scientific data and visualization exports.
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.vtk
+*.vtu
+*.vti
+
+# Python environments and caches; keep scripts and notebooks trackable.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Editor/OS clutter and backups made while editing input files.
+.DS_Store
+._*
+*~
+*.swp
+*.swo
+*.bak
+*.in-e
