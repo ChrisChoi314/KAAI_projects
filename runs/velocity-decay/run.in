@@ -1,0 +1,31 @@
+&run_pars
+  nt=10000
+  tmax=20.
+  it1=1
+
+  itorder=3
+  cdt=0.3
+  cdtv=0.1
+
+  dsnap=0.5
+  dspec=0.1
+  ou_spec=T
+  lspec_start=T
+/
+
+&eos_run_pars
+/
+
+&hydro_run_pars
+/
+
+&density_run_pars
+/
+
+&viscosity_run_pars
+  ivisc='simplified'
+  nu=1e-3
+/
+
+&power_spectrum_run_pars
+/
