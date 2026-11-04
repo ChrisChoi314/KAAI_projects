@@ -53,3 +53,24 @@ __pycache__/
 *.swo
 *.bak
 *.in-e
+
+# Pencil runtime state
+/runs/*/ENDTIME
+/runs/*/LOCK
+/runs/*/ERROR
+/runs/*/runtime/
+
+# Default Slurm output
+/runs/*/slurm-*.out
+/runs/*/slurm-*.err
+
+# Generated plots and movies; preserve analysis code and notebooks
+/runs/*/plots/
+/runs/*/postproc/**/*.png
+/runs/*/postproc/**/*.pdf
+/runs/*/postproc/**/*.svg
+/runs/*/postproc/**/*.gif
+/runs/*/postproc/**/*.mp4
+
+# Additional project virtual environments
+.venv-*/
