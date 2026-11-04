@@ -1,0 +1,39 @@
+&init_pars
+  xyz0=0.,0.,0.
+  Lxyz=6.283185307179586,6.283185307179586,6.283185307179586
+  lperi=T,T,T
+  seed0=12345
+  lwrite_ic=T
+/
+
+&eos_init_pars
+  gamma=1.
+  cs0=0.5773502691896258
+  rho0=1.
+/
+
+&hydro_init_pars
+  lconservative=F
+  lrelativistic=T
+
+  inituu='power_randomphase_hel'
+  ampluu=0.01
+  initpower=4.
+  initpower2=-2.
+  kpeak=3.
+  cutoff=8.
+  ncutoff=2.
+
+  relhel_uu=0.
+  qirro_uu=0.5
+  lsqrt_qirro_uu=T
+  lskip_projection=F
+/
+
+&density_init_pars
+  initlnrho='const_rho'
+  rho_const=1.
+  ldensity_nolog=T
+  lrelativistic_eos=T
+  lrelativistic_eos_corr=T
+/
