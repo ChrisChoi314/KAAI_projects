@@ -30,6 +30,7 @@ if [ -e "$run_dir/data/proc0/VAR0" ]; then
   echo "Refusing to restart existing initialized run: $run_dir"; exit 2
 fi
 cd "$run_dir"
+mkdir -p data
 pc_setupsrc
 if [ "$method" != kt ]; then
   cp "$repo/runs/experiment-$case_name-kt/src/start.x" src/start.x

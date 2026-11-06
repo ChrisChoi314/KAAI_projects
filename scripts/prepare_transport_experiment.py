@@ -121,6 +121,7 @@ def prepare(case, cstar, jstar, reuse=False, amplitude=.1):
     for path,method in zip(paths,METHODS):
         path.mkdir(parents=True)
         (path/'src').mkdir()
+        (path/'data').mkdir()
         # Only editable inputs; never copy old outputs, binaries or linked source.
         for inp in baseline.glob('*.in'):
             if inp.name not in ('start.in','run.in'): shutil.copyfile(inp,path/inp.name)
