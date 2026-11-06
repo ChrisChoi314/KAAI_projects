@@ -1,0 +1,19 @@
+!                     -*-f90-*-   (for emacs)
+! Initialisation parameters
+! 
+! Sample file for 1-D sound wave
+!
+&init_pars
+  cvsid="c193fa7da"
+  lwrite_ic=T
+/
+&eos_init_pars
+/
+&hydro_init_pars
+  inituu='sound-wave', ampluu=1e-2
+/
+&density_init_pars
+  initlnrho='sound-wave', ampllnrho=1e-3
+/
+&entropy_init_pars
+/

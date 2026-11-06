@@ -90,3 +90,33 @@ file sizes, so review staged files before committing:
 git add -A
 git diff --cached --stat
 ```
+
+## Vera
+
+Clone this project repository on Vera separately from the Pencil Code source
+checkout. Track simulation inputs, `src/*.local`, job scripts, and analysis here;
+keep generated builds and data out of Git.
+
+The initial test uses Pencil revision
+`c193fa7da25577df82be36aa2580342def041923`, matching the local installation,
+with Vera modules `gcc/11.2.0` and `mpi/4.1.1-gcc11.2.0`. Install Pencil at
+`/hildafs/projects/phy210003p/choic/software/pencil-code`, or set
+`VERA_PENCIL_HOME` to another checkout before submitting.
+
+From this repository's root on Vera:
+
+```bash
+sbatch scripts/vera-jeans.slurm
+squeue -u choic
+```
+
+The job builds and runs the tracked Jeans inputs with one MPI process on an RM
+compute node. Each submission creates `runs/jeans-vera-JOBID/`, preserving the
+baseline. Read `vera-jeans-JOBID.log` after completion; success ends with
+`PENCIL TEST COMPLETED` and numerical output. This checks execution; numerical
+agreement and multi-process scaling are subsequent checks.
+
+For a new scientific experiment, create and commit a named run's inputs before
+submission. Record the project and Pencil revisions along with its outputs.
+Use the project filesystem for this small test; confirm scratch access and
+output storage before large production runs.

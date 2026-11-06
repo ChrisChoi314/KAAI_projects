@@ -1,0 +1,20 @@
+!
+!  sample file for 1-D sound wave
+!
+&run_pars
+  cvsid="c193fa7da"
+  tmax=1000., it1=100, isave=100, itorder=3,
+  dsnap=10, dvid=.6
+/
+&eos_run_pars
+/
+&hydro_run_pars
+/
+&density_run_pars
+/
+&entropy_run_pars
+! iheatcond='K-const', hcond0=0.
+/
+&viscosity_run_pars
+  nu=1e-5
+/
