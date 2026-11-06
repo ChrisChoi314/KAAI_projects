@@ -1,0 +1,4 @@
+! MAUX CONTRIBUTION 10
+! COMMUNICATED AUXILIARIES 10
+integer, parameter :: ncpus=4,nprocx=2,nprocy=2,nprocz=1
+integer, parameter :: nxgrid=64,nygrid=64,nzgrid=64

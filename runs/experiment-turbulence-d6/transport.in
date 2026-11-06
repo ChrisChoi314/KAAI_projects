@@ -1,0 +1,6 @@
+&transport_experiment
+ transport_mode='d6'
+ compression_threshold=0.003
+ pressure_threshold=0.003
+ sensor_buffer=2
+/

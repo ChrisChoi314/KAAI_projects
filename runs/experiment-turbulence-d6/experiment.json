@@ -1,0 +1,17 @@
+{
+  "case": "turbulence",
+  "method": "d6",
+  "grid": [
+    64,
+    64,
+    64
+  ],
+  "tasks": 4,
+  "baseline": "runs/mixed-turbulence-kt",
+  "compression_threshold": 0.003,
+  "pressure_threshold": 0.003,
+  "buffer_faces": 2,
+  "note": "D6 means central conservative transport; other derivatives and explicit diffusion unchanged.",
+  "ampluu": 0.1,
+  "qirro_uu": 0.5
+}

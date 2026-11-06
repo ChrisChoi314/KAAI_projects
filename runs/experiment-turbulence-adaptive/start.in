@@ -1,0 +1,40 @@
+!  -*-f90-*-  (for Emacs)    vim:set filetype=fortran:  (for vim)
+!
+! Initialisation parameters for mixed compressional turbulence.
+!
+&init_pars
+  cvsid="c193fa7da"
+  xyz0  = 0.0, 0.0, 0.0,      ! first corner of box
+  xyz1=6.283185307179586,6.283185307179586,6.283185307179586
+  lperi =  T ,  T ,  T,        ! periodic direction?
+  seed0=12345
+  lwrite_aux=T
+  lwrite_ic=T
+/
+&eos_init_pars
+  gamma=1., cs0=.57735027
+/
+&hydro_init_pars
+  lconservative=T
+  lrelativistic=T
+  llorentz_as_aux=T
+
+  inituu='power_randomphase_hel'
+  ampluu=0.1
+  initpower=4.
+  initpower2=-2.
+  kpeak=3.
+  cutoff=8.
+  ncutoff=2.
+
+  relhel_uu=0.
+  qirro_uu=.5
+  lsqrt_qirro_uu=T
+  lskip_projection=F
+  lvv_as_comaux=T
+/
+&density_init_pars
+  initlnrho='const_rho', rho_const=1.
+  lrelativistic_eos=T  !(this used to be F for default ultrarel EOS when lrelativistic=T)
+  ldensity_nolog=T
+/
